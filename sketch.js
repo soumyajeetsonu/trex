@@ -41,6 +41,7 @@ function setup() {
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;
+  trex.setCollider("rectangle",0,0,80,trex.height);
   
   ground = createSprite(200,180,400,20);
   ground.addImage("ground",groundImage);
@@ -77,9 +78,9 @@ function draw() {
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
   
-    if(keyDown("space") && trex.y >= 159) {
-      trex.velocityY = -12;
-    }
+  //  if(keyDown("space") && trex.y >= 159) {
+    //  trex.velocityY = -12;
+   // }
   
     trex.velocityY = trex.velocityY + 0.8
   
@@ -92,7 +93,8 @@ function draw() {
     spawnObstacles();
   
     if(obstaclesGroup.isTouching(trex)){
-        gameState = END;
+       // gameState = END;
+       trex.velocityY = -12;
     }
   }
   else if (gameState === END) {
