@@ -70,7 +70,7 @@ function setup() {
 }
 
 function draw() {
-  //trex.debug = true;
+  trex.debug = true;
   background("pink");
   text("Score: "+ score, 500,50);
   
