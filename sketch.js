@@ -41,7 +41,7 @@ function setup() {
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;
-  trex.setCollider("rectangle",10,0,200,trex.height);
+  trex.setCollider("rectangle",20,0,100,trex.height);
   
   ground = createSprite(200,180,400,20);
   ground.addImage("ground",groundImage);
@@ -70,7 +70,7 @@ function setup() {
 }
 
 function draw() {
- // trex.debug = true;
+
   background("pink");
   text("Score: "+ score, 500,50);
   
