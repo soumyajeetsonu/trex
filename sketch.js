@@ -92,9 +92,10 @@ function draw() {
     spawnClouds();
     spawnObstacles();
   
-    if(obstaclesGroup.isTouching(trex)){
+    //if(obstaclesGroup.isTouching(trex)){
+       if(keyDown("space")){
        // gameState = END;
-       trex.velocityY = -12;
+       trex.velocityY = -8;
     }
   }
   else if (gameState === END) {
