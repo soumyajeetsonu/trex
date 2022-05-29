@@ -92,7 +92,7 @@ function draw() {
     spawnClouds();
     spawnObstacles();
   
-    if(obstaclesGroup.isTouching(trex)){
+    if(obstaclesGroup.isTouching(trex) && keyDown("space")){
        
        // gameState = END;
        trex.velocityY = -8;
