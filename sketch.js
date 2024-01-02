@@ -79,7 +79,7 @@ function draw() {
     ground.velocityX = -(6 + 3*score/100);
   
    if(keyDown("space") && trex.y >= 159) {
-      trex.velocityY = -8;
+      trex.velocityY = 8;
     }
   
    
@@ -93,7 +93,6 @@ function draw() {
     spawnObstacles();
   
     if(obstaclesGroup.isTouching(trex) && keyDown("space")){
-       
        gameState = END;
     }
   }
