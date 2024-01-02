@@ -94,8 +94,7 @@ function draw() {
   
     if(obstaclesGroup.isTouching(trex) && keyDown("space")){
        
-       // gameState = END;
-       trex.velocityY = -8;
+       gameState = END;
     }
   }
   else if (gameState === END) {
